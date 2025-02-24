@@ -4227,3 +4227,23 @@ class FerriteTestnet(Ferrite):
         'enode2.ferritecoin.org s t',
         'enode3.ferritecoin.org s t',
     ]
+
+
+class Catcoin(Coin):
+    NAME = "Catcoin"
+    SHORTNAME = "CAT"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    P2PKH_VERBYTE = bytes.fromhex("15")
+    P2SH_VERBYTES = (bytes.fromhex("58"),)
+    WIF_BYTE = bytes.fromhex("95")
+    GENESIS_HASH = ('bc3b4ec43c4ebb2fef49e6240812549e'
+                    '61ffa623d9418608aa90eaad26c96296')
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    TX_COUNT = 568042
+    TX_COUNT_HEIGHT = 388014
+    TX_PER_BLOCK = 3
+    RPC_PORT = 9932
+    REORG_LIMIT = 1000
+    PEERS = []
